@@ -6,7 +6,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import React, { useState, useCallback } from 'react';
 import { IconButton, Menu, MenuItem } from '@material-ui/core';
-import { DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { DatePicker, MuiPickersUtilsProvider } from '@lcsixp/pickers';
 
 const localeMap = {
   en: enLocale,

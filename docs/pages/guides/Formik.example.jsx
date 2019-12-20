@@ -2,7 +2,7 @@ import React from 'react';
 import Code from '../../_shared/Code';
 import { Grid } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
-import { KeyboardDatePicker } from '@material-ui/pickers';
+import { KeyboardDatePicker } from '@lcsixp/pickers';
 
 const DatePickerField = ({ field, form, ...other }) => {
   const currentError = form.errors[field.name];

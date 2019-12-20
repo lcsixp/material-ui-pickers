@@ -16,7 +16,7 @@ assignees: ''
 
 | Tech                 | Version |
 | -------------------- | ------- |
-| @material-ui/pickers |         |
+| @lcsixp/pickers |         |
 | material-ui          |         |
 | TypeScript           |         |
 | React                |         |

@@ -7,7 +7,7 @@ import {
   DateTimePicker,
   DatePicker,
   MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
+} from '@lcsixp/pickers';
 
 jMoment.loadPersian({ dialect: 'persian-modern', usePersianDigits: true });
 

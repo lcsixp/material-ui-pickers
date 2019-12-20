@@ -38,8 +38,8 @@ const Releases: NextFC<ReleasesProps> = ({ tags }) => {
   return (
     <>
       <PageMeta
-        title="Releases - @material-ui/pickers"
-        description="List of @material-ui/pickers releases with a link to per-release documentation site."
+        title="Releases - @lcsixp/pickers"
+        description="List of @lcsixp/pickers releases with a link to per-release documentation site."
       />
 
       <Typography variant="h2" gutterBottom>

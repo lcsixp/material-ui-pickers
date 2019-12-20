@@ -42,7 +42,7 @@ const Docs: React.FC<WithRouterProps> = ({ router }) => {
       </Grid>
 
       <h4> Import </h4>
-      <Code language="jsx">{`import { ${componentName} } from '@material-ui/pickers'`}</Code>
+      <Code language="jsx">{`import { ${componentName} } from '@lcsixp/pickers'`}</Code>
 
       <h4> Inheritance </h4>
       <Typography gutterBottom>

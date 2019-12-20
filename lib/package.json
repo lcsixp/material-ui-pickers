@@ -1,5 +1,5 @@
 {
-  "name": "@material-ui/pickers",
+  "name": "@lcsixp/pickers",
   "version": "3.2.8",
   "private": true,
   "description": "React components, that implements material design pickers for material-ui v4",
@@ -8,7 +8,7 @@
   "keywords": [
     "material-ui",
     "pickers",
-    "@material-ui/pickers",
+    "@lcsixp/pickers",
     "datepicker",
     "timepicker",
     "date-picker",
@@ -47,7 +47,7 @@
   },
   "size-limit": [
     {
-      "path": "build/dist/@material-ui/pickers.esm.js",
+      "path": "build/dist/@lcsixp/pickers.esm.js",
       "limit": "30 KB"
     }
   ],

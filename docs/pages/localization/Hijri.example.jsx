@@ -6,7 +6,7 @@ import {
   DateTimePicker,
   DatePicker,
   MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
+} from '@lcsixp/pickers';
 import 'moment/locale/ar-sa';
 
 function HijriExample() {
