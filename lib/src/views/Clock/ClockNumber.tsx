@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-const positions: Record<number, [number, number]> = {
+const defaultPositions: Record<number, [number, number]> = {
   0: [0, 40],
   1: [55, 19.6],
   2: [94.4, 59.5],
@@ -35,6 +35,7 @@ export interface ClockNumberProps {
   label: string;
   selected: boolean;
   isInner?: boolean;
+  positions?: Record<number, [number, number]>;
 }
 
 export const useStyles = makeStyles(
@@ -63,14 +64,15 @@ export const useStyles = makeStyles(
   { name: 'MuiPickersClockNumber' }
 );
 
-export const ClockNumber: React.FC<ClockNumberProps> = ({ selected, label, index, isInner }) => {
+export const ClockNumber: React.FC<ClockNumberProps> = ({ selected, label, index, isInner, positions }) => {
   const classes = useStyles();
   const className = clsx(classes.clockNumber, {
     [classes.clockNumberSelected]: selected,
   });
 
   const transformStyle = React.useMemo(() => {
-    const position = positions[index];
+    
+    const position = positions && positions.length == 24 ? positions[index] : defaultPositions[index];
 
     return {
       transform: `translate(${position[0]}px, ${position[1]}px`,

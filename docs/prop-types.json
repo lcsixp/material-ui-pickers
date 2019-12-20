@@ -4042,6 +4042,19 @@
       "type": {
         "name": "(date: any, isFinish?: boolean) => void"
       }
+    },
+    "positions": {
+      "defaultValue": null,
+      "description": "Positions for the clock numbers",
+      "name": "positions",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "Record<number, [number, number]>"
+      }
     }
   },
   "ClockView": {
@@ -4138,6 +4151,19 @@
       "required": true,
       "type": {
         "name": "(date: any, isFinish?: boolean) => void"
+      }
+    },
+    "positions": {
+      "defaultValue": null,
+      "description": "Positions for the clock numbers",
+      "name": "positions",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "Record<number, [number, number]>"
       }
     }
   }

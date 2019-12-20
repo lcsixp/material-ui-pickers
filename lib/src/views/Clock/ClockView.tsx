@@ -22,6 +22,7 @@ export interface TimePickerViewProps {
   onMinutesChange: (date: MaterialUiPickersDate, isFinish?: boolean) => void;
   /** On seconds change */
   onSecondsChange: (date: MaterialUiPickersDate, isFinish?: boolean) => void;
+  positions?: Record<number, [number, number]>;
 }
 
 export const ClockView: React.FC<TimePickerViewProps> = ({
@@ -32,6 +33,7 @@ export const ClockView: React.FC<TimePickerViewProps> = ({
   ampm,
   date,
   minutesStep,
+  positions
 }) => {
   const utils = useUtils();
   const viewProps = React.useMemo(() => {
@@ -39,7 +41,7 @@ export const ClockView: React.FC<TimePickerViewProps> = ({
       case ClockType.HOURS:
         return {
           value: utils.getHours(date),
-          children: getHourNumbers({ date, utils, ampm: Boolean(ampm) }),
+          children: getHourNumbers({ date, utils, ampm: Boolean(ampm), positions }),
           onChange: (value: number, isFinish?: boolean) => {
             const currentMeridiem = getMeridiem(date, utils);
             const updatedTimeWithMeridiem = convertToMeridiem(
@@ -57,7 +59,7 @@ export const ClockView: React.FC<TimePickerViewProps> = ({
         const minutesValue = utils.getMinutes(date);
         return {
           value: minutesValue,
-          children: getMinutesNumbers({ value: minutesValue, utils }),
+          children: getMinutesNumbers({ value: minutesValue, utils, positions }),
           onChange: (value: number, isFinish?: boolean) => {
             const updatedTime = utils.setMinutes(date, value);
 
@@ -69,7 +71,7 @@ export const ClockView: React.FC<TimePickerViewProps> = ({
         const secondsValue = utils.getSeconds(date);
         return {
           value: secondsValue,
-          children: getMinutesNumbers({ value: secondsValue, utils }),
+          children: getMinutesNumbers({ value: secondsValue, utils, positions }),
           onChange: (value: number, isFinish?: boolean) => {
             const updatedTime = utils.setSeconds(date, value);
 
@@ -80,7 +82,7 @@ export const ClockView: React.FC<TimePickerViewProps> = ({
       default:
         throw new Error('You must provide the type for TimePickerView');
     }
-  }, [ampm, date, onHourChange, onMinutesChange, onSecondsChange, type, utils]);
+  }, [ampm, date, onHourChange, onMinutesChange, onSecondsChange, type, , positions]);
 
   return <Clock type={type} ampm={ampm} minutesStep={minutesStep} {...viewProps} />;
 };
